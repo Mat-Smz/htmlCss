@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mon projet</title>
+    <!-- <link rel="stylesheet" href="/assets/css/icons.css" /> -->
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <!-- <script src="/assets/js/main.js"></script> -->
+  </head>
+  <body>
+    <div class="contact-box">
+      <h1>Contactez-moi</h1>
+
+      <form id="formulaire" class="contact-form">
+        <input
+          type="text"
+          name="nom"
+          id="nom"
+          value=""
+          placeholder="Votre nom"
+        /><br />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value=""
+          placeholder="Votre email"
+        /><br />
+
+        <select
+          type="text"
+          name="nom"
+          id="nom"
+          class="select"
+          placeholder="Vous me contactez pour..."
+        >
+          <option value="fiat" selected>Vous me contactez pour</option>
+          <option value="volvo">Me dire Coucou</option>
+          <option value="saab">Demander un rendez-vous</option>
+          <option value="fiat">M'insulter</option>
+          <option value="audi">Par plaisir</option>
+        </select>
+
+        <br />
+        <textarea
+          name="message"
+          id="message"
+          class="message"
+          cols="30"
+          rows="10"
+          placeholder="Votre message"
+        ></textarea
+        ><br />
+        <button type="submit" class="contact-me">Envoyer</button>
+      </form>
+    </div>
+  </body>
+</html>
