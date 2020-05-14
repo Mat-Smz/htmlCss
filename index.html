@@ -4,58 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mon projet</title>
-    <!-- <link rel="stylesheet" href="/assets/css/icons.css" /> -->
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <!-- <script src="/assets/js/main.js"></script> -->
+    <title>Card profile</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/brands.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.1.1/css/fontawesome.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="contact-box">
-      <h1>Contactez-moi</h1>
+    <div>
+      <div class="card">
+        <div class="card__photo">
+          <img src="profil.png" alt="User" />
+        </div>
+        <div>
+          <h1 class="card__title">C-117</h1>
+          <h3 class="card__subtitle">Full Stack developer</h3>
+          <p class="content__biography">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+            quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo
+          </p>
+        </div>
+      </div>
+      <div class="card__footer">
+        <i class="fab fa-js" title="JavaScript"></i>
+        <i class="fab fa-node" title="Nodejs"></i>
+        <i class="fab fa-html5" title="HTML5"></i>
+        <i class="fab fa-react" title="React"></i>
+        <i class="fab fa-css3-alt" title="CSS"></i>
+        <i class="fab fa-react" title="React Native"></i>
+        <i class="fab fa-github" title="Github"></i>
+      </div>
+      <br />
 
-      <form id="formulaire" class="contact-form">
-        <input
-          type="text"
-          name="nom"
-          id="nom"
-          value=""
-          placeholder="Votre nom"
-        /><br />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          value=""
-          placeholder="Votre email"
-        /><br />
+      <script>
+        const card = document.querySelector(".card");
+        const card_footer = document.querySelector(".card__footer");
 
-        <select
-          type="text"
-          name="nom"
-          id="nom"
-          class="select"
-          placeholder="Vous me contactez pour..."
-        >
-          <option value="fiat" selected>Vous me contactez pour</option>
-          <option value="volvo">Me dire Coucou</option>
-          <option value="saab">Demander un rendez-vous</option>
-          <option value="fiat">M'insulter</option>
-          <option value="audi">Par plaisir</option>
-        </select>
+        card.addEventListener("click", () => {
+          const { bottom } = card.getBoundingClientRect();
+          card_footer.classList.toggle("card__footer--visible");
 
-        <br />
-        <textarea
-          name="message"
-          id="message"
-          class="message"
-          cols="30"
-          rows="10"
-          placeholder="Votre message"
-        ></textarea
-        ><br />
-        <button type="submit" class="contact-me">Envoyer</button>
-      </form>
+          if (card_footer.classList.contains("card__footer--visible"))
+            card_footer.style.top = `${bottom}px`;
+          else card_footer.style.top = `50vh`;
+        });
+      </script>
     </div>
   </body>
 </html>
